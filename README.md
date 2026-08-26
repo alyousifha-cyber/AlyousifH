@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>د. حسين عبد الله اليوسف | السيرة الذاتية التنفيذية</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Tajawal -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F2C59',
+                        secondary: '#183D3D',
+                        accent: '#005B96',
+                        gold: '#D4AF37',
+                        lightbg: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #F8FAFC;
+            font-size: 1.125rem;
+        }
+        .page-section {
+            display: none;
+        }
+        .page-section.active {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Header & Navigation Bar -->
+    <header class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Branding with Profile Picture -->
+                <div class="flex items-center space-x-3 space-x-reverse cursor-pointer" onclick="navigateTo('home')">
+                    <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-gold shadow-md flex-shrink-0">
+                        <img src="1000999218.png" alt="د. حسين عبد الله اليوسف" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h1 class="text-lg md:text-xl font-black leading-tight text-white">د. حسين اليوسف</h1>
+                        <p class="text-xs text-blue-200 font-medium">استشاري جراحة الإصابات واستبدال المفاصل</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navbar Links -->
+                <nav class="hidden lg:flex space-x-1 space-x-reverse font-bold text-sm xl:text-base">
+                    <button onclick="navigateTo('home')" class="nav-btn active px-3 py-2 rounded-md hover:bg-accent transition text-white" id="nav-home">الرئيسية</button>
+                    <button onclick="navigateTo('leadership')" class="nav-btn px-3 py-2 rounded-md hover:bg-accent transition text-blue-100" id="nav-leadership">الخبرات القيادية</button>
+                    <button onclick="navigateTo('education')" class="nav-btn px-3 py-2 rounded-md hover:bg-accent transition text-blue-100" id="nav-education">المؤهلات والزمالات</button>
+                    <button onclick="navigateTo('academic')" class="nav-btn px-3 py-2 rounded-md hover:bg-accent transition text-blue-100" id="nav-academic">الأدوار الأكاديمية</button>
+                    <button onclick="navigateTo('research')" class="nav-btn px-3 py-2 rounded-md hover:bg-accent transition text-blue-100" id="nav-research">الأبحاث والمساهمات</button>
+                    <button onclick="navigateTo('awards')" class="nav-btn px-3 py-2 rounded-md hover:bg-accent transition text-blue-100" id="nav-awards">الجوائز</button>
+                    <button onclick="navigateTo('media')" class="nav-btn px-3 py-2 rounded-md hover:bg-accent transition text-blue-100" id="nav-media">المشاركات الإعلامية</button>
+                    <button onclick="navigateTo('memberships')" class="nav-btn px-3 py-2 rounded-md hover:bg-accent transition text-blue-100" id="nav-memberships">العضويات</button>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-gold focus:outline-none text-2xl p-2">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navbar Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-secondary border-t border-accent px-4 pt-2 pb-6 space-y-2 font-bold text-lg">
+            <button onclick="navigateTo('home')" class="block w-full text-right px-3 py-2 rounded-md text-white hover:bg-accent">الرئيسية والنبذة</button>
+            <button onclick="navigateTo('leadership')" class="block w-full text-right px-3 py-2 rounded-md text-white hover:bg-accent">الخبرات القيادية</button>
+            <button onclick="navigateTo('education')" class="block w-full text-right px-3 py-2 rounded-md text-white hover:bg-accent">المؤهلات والزمالات</button>
+            <button onclick="navigateTo('academic')" class="block w-full text-right px-3 py-2 rounded-md text-white hover:bg-accent">الأدوار الأكاديمية</button>
+            <button onclick="navigateTo('research')" class="block w-full text-right px-3 py-2 rounded-md text-white hover:bg-accent">الأبحاث والمساهمات</button>
+            <button onclick="navigateTo('awards')" class="block w-full text-right px-3 py-2 rounded-md text-white hover:bg-accent">الجوائز والتكريمات</button>
+            <button onclick="navigateTo('media')" class="block w-full text-right px-3 py-2 rounded-md text-white hover:bg-accent">المشاركات الإعلامية</button>
+            <button onclick="navigateTo('memberships')" class="block w-full text-right px-3 py-2 rounded-md text-white hover:bg-accent">العضويات الدولية</button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- PAGE 1: الرئيسية والنبذة والخبرات السريرية -->
+        <section id="page-home" class="page-section active space-y-10">
+            <!-- Hero Header Card -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 flex flex-col md:flex-row items-center p-6 md:p-10 gap-8">
+                <div class="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-gold shadow-2xl flex-shrink-0">
+                    <img src="1000999218.png" alt="د. حسين عبد الله اليوسف" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-grow text-center md:text-right space-y-4">
+                    <div class="inline-block bg-blue-100 text-primary px-4 py-1 rounded-full text-sm font-bold mb-2">
+                        سيرة ذاتية تنفيذية وسريرية
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-primary">د. حسين عبد الله اليوسف</h2>
+                    <p class="text-xl md:text-2xl font-bold text-accent">
+                        استشاري جراحة الإصابات والكسور المعقدة واستبدال المفاصل | خبير القيادة والإدارة الطبية
+                    </p>
+                    <blockquote class="text-lg italic font-semibold text-gray-600 bg-gray-50 p-4 rounded-xl border-r-4 border-gold">
+                        "دقة جراحية أحدثت فرقاً.. وقيادة إدارية رسمت معالم الكفاءة في الرعاية الصحية."
+                    </blockquote>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 text-base font-semibold text-gray-700 pt-2">
+                        <span class="flex items-center gap-2 bg-slate-100 px-3 py-1.5 rounded-lg"><i class="fa-solid fa-location-dot text-red-500"></i> الرياض، المملكة العربية السعودية</span>
+                        <a href="mailto:alyousifha@gmail.com" class="flex items-center gap-2 bg-slate-100 px-3 py-1.5 rounded-lg hover:bg-blue-50 transition"><i class="fa-solid fa-envelope text-accent"></i> alyousifha@gmail.com</a>
+                        <a href="tel:+966564664984" class="flex items-center gap-2 bg-slate-100 px-3 py-1.5 rounded-lg hover:bg-blue-50 transition"><i class="fa-solid fa-phone text-green-600"></i> 966564664984+</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Overview -->
+            <div class="bg-white rounded-2xl shadow-md p-8 border border-gray-100 space-y-4">
+                <h3 class="text-2xl font-bold text-primary border-b-2 border-gold pb-3 flex items-center gap-3">
+                    <i class="fa-solid fa-user-doctor text-accent"></i> نبذة عامة
+                </h3>
+                <p class="text-xl text-gray-700 leading-relaxed font-medium">
+                    استشاري جراحة العظام والإصابات المعقدة بخبرة ممتدة تجمع بين التميز السريري، والتدريب الأكاديمي، والقيادة التشغيلية في أكبر المستشفيات المرجعية. متخصص في معالجة الكسور المعقدة وكسور الحوض الشديدة، وجراحات ترميم واستبدال الورك والركبة باستخدام أحدث التقنيات والروبوت الجراحي.
+                </p>
+                <p class="text-xl text-gray-700 leading-relaxed font-medium">
+                    يمتلك سجلاً حافلاً في تطوير المنظومات الصحية عبر إدارة غرف العمليات، وتوسيع سعة جراحات اليوم الواحد، ورفع الكفاءة التشغيلية ضمن التجمعات الصحية الكبرى بالمملكة، إلى جانب مشاركاته الأكاديمية والبحثية في المحافل الدولية.
+                </p>
+            </div>
+
+            <!-- Clinical Expertise -->
+            <div class="bg-white rounded-2xl shadow-md p-8 border border-gray-100 space-y-6">
+                <h3 class="text-2xl font-bold text-primary border-b-2 border-gold pb-3 flex items-center gap-3">
+                    <i class="fa-solid fa-stethoscope text-accent"></i> الخبرات السريرية والجراحية
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-50 p-6 rounded-xl border border-gray-200">
+                        <div class="text-gold text-3xl mb-3"><i class="fa-solid fa-bone"></i></div>
+                        <h4 class="text-xl font-bold text-primary mb-2">ترميم الكسور المعقدة</h4>
+                        <p class="text-gray-700 font-medium">تخصص دقيق في التعامل مع أصعب حالات الكسور بمختلف أنواعها، بما فيها كسور الحوض والورك الحَرَجة.</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-gray-200">
+                        <div class="text-gold text-3xl mb-3"><i class="fa-solid fa-microscope"></i></div>
+                        <h4 class="text-xl font-bold text-primary mb-2">تدخل جراحي محدود (MIS)</h4>
+                        <p class="text-gray-700 font-medium">إجراء الجراحات المتقدمة والدقيقة بأقل قدر من التدخل الجراحي لضمان تعافٍ أسرع للمريض وتقليل فترة الاستشفاء.</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-gray-200">
+                        <div class="text-gold text-3xl mb-3"><i class="fa-solid fa-robot"></i></div>
+                        <h4 class="text-xl font-bold text-primary mb-2">استبدال المفاصل بالروبوت</h4>
+                        <p class="text-gray-700 font-medium">تطبيق أحدث تقنيات زراعة وتلبيس المفاصل باستخدام الروبوت الجراحي لتحقيق أعلى مستويات الدقة وتقليل الألم بعد العملية.</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-gray-200">
+                        <div class="text-gold text-3xl mb-3"><i class="fa-solid fa-award"></i></div>
+                        <h4 class="text-xl font-bold text-primary mb-2">تميز جراحي وتدريب رائد</h4>
+                        <p class="text-gray-700 font-medium">خبرة ممتدة في التدريب المتقدم للكوادر الطبية، وإشراف مستمر على تطوير البرامج الجراحية لرفع مستوى الرعاية الصحية.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 2: الخبرات القيادية والتنفيذية -->
+        <section id="page-leadership" class="page-section space-y-8">
+            <div class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                <h3 class="text-3xl font-extrabold text-primary border-b-2 border-gold pb-4 mb-8 flex items-center gap-3">
+                    <i class="fa-solid fa-user-tie text-accent"></i> الخبرات القيادية والتنفيذية
+                </h3>
+                
+                <div class="space-y-8 relative border-r-4 border-blue-200 pr-6 mr-3">
+                    <div class="relative">
+                        <span class="absolute -right-10 top-0 w-6 h-6 rounded-full bg-gold border-4 border-white shadow"></span>
+                        <h4 class="text-2xl font-bold text-primary">القائد السريري لإدارة غرف العمليات</h4>
+                        <p class="text-lg font-bold text-accent">تجمع الرياض الصحي الأول (R1)</p>
+                        <ul class="list-disc list-inside mt-3 space-y-2 text-gray-700 font-medium text-lg">
+                            <li>قيادة ورسم الخطط الاستراتيجية لعمليات غرف العمليات عبر شبكة مستشفيات التجمع.</li>
+                            <li>تطوير الأداء الجراحي وتنسيق القوى العاملة لاستغلال الطاقة الاستيعابية بأعلى كفاءة.</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -right-10 top-0 w-6 h-6 rounded-full bg-gold border-4 border-white shadow"></span>
+                        <h4 class="text-2xl font-bold text-primary">مدير إدارة غرف العمليات</h4>
+                        <p class="text-lg font-bold text-accent">مدينة الملك سعود الطبية</p>
+                        <ul class="list-disc list-inside mt-3 space-y-2 text-gray-700 font-medium text-lg">
+                            <li>الإشراف على الحوكمة الشاملة لأحد أكبر المجمعات الجراحية بالمنطقة.</li>
+                            <li>تقليل معدلات إلغاء العمليات وتوسيع منصات جراحة اليوم الواحد معتمداً على اتخاذ القرار الموجه بالبيانات.</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -right-10 top-0 w-6 h-6 rounded-full bg-gold border-4 border-white shadow"></span>
+                        <h4 class="text-2xl font-bold text-primary">مساعد المدير الطبي</h4>
+                        <p class="text-lg font-bold text-accent">مدينة الملك سعود الطبية</p>
+                        <ul class="list-disc list-inside mt-3 space-y-2 text-gray-700 font-medium text-lg">
+                            <li>قيادة مبادرات جودة الرعاية الصحية وإدارة المخاطر والسلامة.</li>
+                            <li>الإشراف على عمل الأطباء ورؤساء الأقسام والمشاركة في تطوير الخدمات والتخطيط الاستراتيجي وإدارة الأزمات.</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -right-10 top-0 w-6 h-6 rounded-full bg-gold border-4 border-white shadow"></span>
+                        <h4 class="text-2xl font-bold text-primary">رئيس وحدة جراحة اليوم الواحد</h4>
+                        <p class="text-lg font-bold text-accent">مدينة الملك سعود الطبية</p>
+                        <ul class="list-disc list-inside mt-3 space-y-2 text-gray-700 font-medium text-lg">
+                            <li>إعادة هيكلة وتوسيع خدمات جراحة اليوم الواحد، مما ساهم في تخفيف العبء عن أسرّة التنويم وتحسين وصول المرضى للرعاية.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: المؤهلات الأكاديمية والزمالات -->
+        <section id="page-education" class="page-section space-y-8">
+            <div class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                <h3 class="text-3xl font-extrabold text-primary border-b-2 border-gold pb-4 mb-8 flex items-center gap-3">
+                    <i class="fa-solid fa-graduation-cap text-accent"></i> المؤهلات الأكاديمية والزمالات
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="flex items-start gap-4 p-5 bg-slate-50 rounded-xl border border-gray-200">
+                        <img src="https://svgsilh.com/svg/2027282.svg" alt="London College" class="w-16 h-16 object-contain flex-shrink-0 opacity-80">
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">ماجستير إدارة الأعمال (MBA)</h4>
+                            <p class="text-lg font-semibold text-accent">كلية لندن (London College)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-5 bg-slate-50 rounded-xl border border-gray-200">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/University_of_Ottawa_logo.svg/1200px-University_of_Ottawa_logo.svg.png" alt="University of Ottawa" class="w-16 h-16 object-contain flex-shrink-0">
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">الزمالة الكندية في إصابات العظام</h4>
+                            <p class="text-lg font-semibold text-accent">جامعة أوتاوا - كندا</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-5 bg-slate-50 rounded-xl border border-gray-200">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/University_of_Ottawa_logo.svg/1200px-University_of_Ottawa_logo.svg.png" alt="University of Ottawa" class="w-16 h-16 object-contain flex-shrink-0">
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">الزمالة الكندية في ترميم واستبدال الورك والركبة</h4>
+                            <p class="text-lg font-semibold text-accent">جامعة أوتاوا - كندا</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-5 bg-slate-50 rounded-xl border border-gray-200">
+                        <img src="https://www.scfhs.org.sa/sites/default/files/2021-02/SCFHS_Logo.png" alt="SCFHS" class="w-16 h-16 object-contain flex-shrink-0">
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">البورد السعودي في جراحة العظام (SB-Ortho)</h4>
+                            <p class="text-lg font-semibold text-accent">الهيئة السعودية للتخصصات الصحية</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-5 bg-slate-50 rounded-xl border border-gray-200">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/FIFA_logo.svg" alt="FIFA" class="w-16 h-16 object-contain flex-shrink-0">
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">دبلوما الطب الرياضي</h4>
+                            <p class="text-lg font-semibold text-accent">الاتحاد الدولي لكرة القدم (FIFA)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-5 bg-slate-50 rounded-xl border border-gray-200">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/King_King_Faisal_University_Logo.png" alt="KFU" class="w-16 h-16 object-contain flex-shrink-0">
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">بكالوريوس الطب والجراحة (MBBS)</h4>
+                            <p class="text-lg font-semibold text-accent">جامعة الملك فيصل (مرتبة الشرف)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 4: الأدوار الأكاديمية والخدمات المهنية -->
+        <section id="page-academic" class="page-section space-y-8">
+            <div class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                <h3 class="text-3xl font-extrabold text-primary border-b-2 border-gold pb-4 mb-8 flex items-center gap-3">
+                    <i class="fa-solid fa-chalkboard-user text-accent"></i> الأدوار الأكاديمية والخدمات المهنية
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary text-gold flex items-center justify-center text-xl flex-shrink-0"><i class="fa-solid fa-user-graduate"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">مدير برنامج زمالة الإصابات</h4>
+                            <p class="text-gray-600 font-semibold">مدينة الملك سعود الطبية</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary text-gold flex items-center justify-center text-xl flex-shrink-0"><i class="fa-solid fa-building-columns"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">المشرف الأكاديمي لجراحة العظام</h4>
+                            <p class="text-gray-600 font-semibold">تجمع الرياض الصحي الأول</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary text-gold flex items-center justify-center text-xl flex-shrink-0"><i class="fa-solid fa-users-gear"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">عضو المجلس العلمي لبرنامج زمالة الإصابات</h4>
+                            <p class="text-gray-600 font-semibold">الهيئة السعودية للتخصصات الصحية</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary text-gold flex items-center justify-center text-xl flex-shrink-0"><i class="fa-solid fa-clipboard-check"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">خبير ومقيم اعتماد</h4>
+                            <p class="text-gray-600 font-semibold">البرامج الطبية والمنشآت الصحية لدى الهيئة السعودية للتخصصات الصحية</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary text-gold flex items-center justify-center text-xl flex-shrink-0"><i class="fa-solid fa-boxes-packing"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">المقيم الفني لأنظمة ومستلزمات العظام</h4>
+                            <p class="text-gray-600 font-semibold">الشركة الوطنية للشراء الموحد (NUPCO)</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary text-gold flex items-center justify-center text-xl flex-shrink-0"><i class="fa-solid fa-earth-americas"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">مدرب ومعلم معتمد</h4>
+                            <p class="text-gray-600 font-semibold">دورات AO Trauma العالمية لإصابات العظام</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 flex items-center gap-4 md:col-span-2">
+                        <div class="w-12 h-12 rounded-full bg-primary text-gold flex items-center justify-center text-xl flex-shrink-0"><i class="fa-solid fa-chalkboard"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">عضو هيئة تدريس</h4>
+                            <p class="text-gray-600 font-semibold">معيد ومحاضر في عدة كليات طب خاصة بالرياض</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 5: الأبحاث والمساهمات العلمية -->
+        <section id="page-research" class="page-section space-y-8">
+            <div class="bg-white rounded-2xl shadow-md p-8 border border-gray-100 space-y-6">
+                <h3 class="text-3xl font-extrabold text-primary border-b-2 border-gold pb-4 mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-book-journal-whills text-accent"></i> المساهمات الأكاديمية والبحثية
+                </h3>
+
+                <div class="bg-blue-50 border-r-8 border-accent p-6 rounded-xl space-y-3">
+                    <div class="inline-block bg-accent text-white px-3 py-1 rounded-md text-sm font-bold">إنجاز عالمي بارز</div>
+                    <h4 class="text-2xl font-black text-primary">تأليف مرجع علمي عالمي (AAOS)</h4>
+                    <p class="text-lg text-gray-800 font-semibold leading-relaxed">
+                        المشاركة في تأليف فصل علمي متخصص بعنوان <span class="text-accent">"حفظ المفصل بدون استبدال لاضطرابات الورك"</span> ضمن كتاب:
+                        <br>
+                        <span class="font-extrabold text-primary">(AAOS OKU: Hip & Knee, 5th Edition)</span> 
+                        الصادر عن الأكاديمية الأمريكية لجراحي العظام (AAOS)، والذي يُعد مرجعاً علمياً وطبياً عالمياً معتمداً لجراحي المفاصل.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="p-5 border border-gray-200 rounded-xl bg-slate-50">
+                        <h5 class="text-xl font-bold text-primary mb-1">تطبيق الطب عن بُعد</h5>
+                        <p class="text-gray-700 font-medium">دراسة قياس تكيف واستخدام الطب عن بُعد في جراحة العظام بالمملكة العربية السعودية (Telemedicine and e-Health).</p>
+                    </div>
+
+                    <div class="p-5 border border-gray-200 rounded-xl bg-slate-50">
+                        <h5 class="text-xl font-bold text-primary mb-1">تطوير جراحة اليوم الواحد</h5>
+                        <p class="text-gray-700 font-medium">تقييم سلامة وفاعلية استبدال الورك الكامل كإجراء لمرضى العيادات الخارجية (Journal of Arthroplasty).</p>
+                    </div>
+
+                    <div class="p-5 border border-gray-200 rounded-xl bg-slate-50">
+                        <h5 class="text-xl font-bold text-primary mb-1">التقارير الطبية المتقدمة</h5>
+                        <p class="text-gray-700 font-medium">نشر تقرير حالة معقدة بعنوان "الثلاثي المرعب للورك" (Int. Journal of Surgery Case Reports).</p>
+                    </div>
+
+                    <div class="p-5 border border-gray-200 rounded-xl bg-slate-50">
+                        <h5 class="text-xl font-bold text-primary mb-1">المشاركات الدولية</h5>
+                        <p class="text-gray-700 font-medium">تقديم أوراق بحثية حول "وفيات كسور الفخذ الهشاشية" و"استبدال الورك في الأورام النقيلية" بالمؤتمر الكندي لجراحة العظام.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 6: الجوائز والتكريمات -->
+        <section id="page-awards" class="page-section space-y-8">
+            <div class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                <h3 class="text-3xl font-extrabold text-primary border-b-2 border-gold pb-4 mb-8 flex items-center gap-3">
+                    <i class="fa-solid fa-trophy text-gold"></i> الجوائز والتكريمات
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-amber-50 p-6 rounded-xl border border-amber-200 flex items-center gap-4">
+                        <div class="text-4xl text-gold"><i class="fa-solid fa-award"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">جائزة الأمير محمد بن فهد</h4>
+                            <p class="text-gray-700 font-semibold">للتميز العلمي</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50 p-6 rounded-xl border border-amber-200 flex items-center gap-4">
+                        <div class="text-4xl text-gold"><i class="fa-solid fa-star"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">جائزة المدير للأداء المتميز</h4>
+                            <p class="text-gray-700 font-semibold">تقدير الأداء القيادي والسريري</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50 p-6 rounded-xl border border-amber-200 flex items-center gap-4">
+                        <div class="text-4xl text-gold"><i class="fa-solid fa-medal"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">جائزة أفضل مشروع (ADDA)</h4>
+                            <p class="text-gray-700 font-semibold">مشروع جراحة اليوم الواحد لكسور اليد</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50 p-6 rounded-xl border border-amber-200 flex items-center gap-4">
+                        <div class="text-4xl text-gold"><i class="fa-solid fa-user-check"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">جائزة الطبيب المتميز</h4>
+                            <p class="text-gray-700 font-semibold">التميز في الرعاية الصحية</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50 p-6 rounded-xl border border-amber-200 flex items-center gap-4 md:col-span-2">
+                        <div class="text-4xl text-gold"><i class="fa-solid fa-microphone-lines"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">جائزة أفضل عرض بحثي شفهي</h4>
+                            <p class="text-gray-700 font-semibold">مؤتمر الإمارات الدولي لجراحة العظام</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 7: المشاركات الإعلامية والظهور الإخباري -->
+        <section id="page-media" class="page-section space-y-8">
+            <div class="bg-white rounded-2xl shadow-md p-8 border border-gray-100 space-y-6">
+                <h3 class="text-3xl font-extrabold text-primary border-b-2 border-gold pb-4 mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-tv text-accent"></i> المركز الإعلامي واللقاءات
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 space-y-3">
+                        <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                            <i class="fa-brands fa-youtube text-2xl"></i> روتانا خليجية (برنامج يا هلا)
+                        </div>
+                        <p class="text-gray-700 font-medium">توضيح أسباب إصابة الركبة بالخشونة وتصنيفها بين النوع الأول والنوع الثانوي.</p>
+                        <a href="https://www.youtube.com" target="_blank" class="inline-flex items-center gap-2 text-accent font-bold hover:underline">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> شاهد المقطع على يوتيوب
+                        </a>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 space-y-3">
+                        <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                            <i class="fa-brands fa-youtube text-2xl"></i> روتانا خليجية (برنامج يا هلا)
+                        </div>
+                        <p class="text-gray-700 font-medium">استعراض طرق وأساليب علاج خشونة الركبة وأهمية تقليل الوزن والعلاج الطبيعي.</p>
+                        <a href="https://www.youtube.com" target="_blank" class="inline-flex items-center gap-2 text-accent font-bold hover:underline">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> شاهد المقطع على يوتيوب
+                        </a>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 space-y-3">
+                        <div class="flex items-center gap-2 text-blue-700 font-bold text-lg">
+                            <i class="fa-brands fa-linkedin text-2xl"></i> قناة الإخبارية السعودية (برنامج التاسعة)
+                        </div>
+                        <p class="text-gray-700 font-medium">استضافة وتغطية خاصة تناولت الرعاية المتقدمة وجراحة العظام.</p>
+                        <a href="https://www.linkedin.com" target="_blank" class="inline-flex items-center gap-2 text-accent font-bold hover:underline">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> شاهد التغطية على LinkedIn
+                        </a>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 space-y-3">
+                        <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                            <i class="fa-solid fa-newspaper text-2xl"></i> وكالة الأنباء السعودية (واس)
+                        </div>
+                        <p class="text-gray-700 font-medium">خبر صحفي رسمي يبرز التميز في عمليات اليوم الواحد وتخفيف العبء عن أسرّة التنويم.</p>
+                        <a href="https://www.spa.gov.sa/N2487348" target="_blank" class="inline-flex items-center gap-2 text-accent font-bold hover:underline">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> اقرأ الخبر على وكالة واس
+                        </a>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 space-y-3">
+                        <div class="flex items-center gap-2 text-purple-700 font-bold text-lg">
+                            <i class="fa-solid fa-radio text-2xl"></i> إذاعة الرياض (برنامج 12)
+                        </div>
+                        <p class="text-gray-700 font-medium">حوار توعوي حول "وقاية المفاصل والعظام لضيوف الرحمن خلال موسم الحج".</p>
+                        <a href="https://www.youtube.com" target="_blank" class="inline-flex items-center gap-2 text-accent font-bold hover:underline">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> استمع للحلقة على يوتيوب
+                        </a>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 space-y-3">
+                        <div class="flex items-center gap-2 text-blue-900 font-bold text-lg">
+                            <i class="fa-solid fa-newspaper text-2xl"></i> جريدة الرياض
+                        </div>
+                        <p class="text-gray-700 font-medium">تقرير صحفي طبي يعرض الخبرات الطبية في الجراحات المعقدة.</p>
+                        <a href="https://www.alriyadh.com" target="_blank" class="inline-flex items-center gap-2 text-accent font-bold hover:underline">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> اقرأ التقرير على صحيفة الرياض
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 8: العضويات المهنية الدولية -->
+        <section id="page-memberships" class="page-section space-y-8">
+            <div class="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+                <h3 class="text-3xl font-extrabold text-primary border-b-2 border-gold pb-4 mb-8 flex items-center gap-3">
+                    <i class="fa-solid fa-globe text-accent"></i> العضويات المهنية الدولية
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 flex items-center gap-4">
+                        <img src="https://www.aaos.org/siteassets/logos/aaos-logo-full.png" alt="AAOS" class="w-14 h-14 object-contain">
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">AAOS</h4>
+                            <p class="text-gray-600 font-semibold text-sm">الأكاديمية الأمريكية لجراحي العظام</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 flex items-center gap-4">
+                        <img src="https://toa.on.ca/wp-content/uploads/2019/04/COA-logo.png" alt="COA" class="w-14 h-14 object-contain">
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">COA</h4>
+                            <p class="text-gray-600 font-semibold text-sm">الجمعية الكندية لجراحة العظام</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 flex items-center gap-4">
+                        <img src="https://aotrauma.aofoundation.org/assets/images/ao-logo.svg" alt="AO Foundation" class="w-14 h-14 object-contain">
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">AO Foundation</h4>
+                            <p class="text-gray-600 font-semibold text-sm">مؤسسة AO العالمية لإصابات العظام</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 flex items-center gap-4">
+                        <img src="https://ota.org/themes/custom/ota/logo.png" alt="OTA" class="w-14 h-14 object-contain">
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">OTA</h4>
+                            <p class="text-gray-600 font-semibold text-sm">جمعية إصابات العظام الأمريكية</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-xl border border-gray-200 flex items-center gap-4 md:col-span-2 lg:col-span-1">
+                        <div class="w-14 h-14 rounded-full bg-primary text-gold flex items-center justify-center font-bold text-xl flex-shrink-0">ICJR</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary">ICJR</h4>
+                            <p class="text-gray-600 font-semibold text-sm">المؤتمر الدولي لإعادة ترميم المفاصل</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8 border-t border-accent mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-3">
+            <p class="font-bold text-lg">د. حسين عبد الله اليوسف © 2026</p>
+            <p class="text-sm text-blue-200">استشاري جراحة الإصابات والكسور المعقدة واستبدال المفاصل | خبير القيادة والإدارة الطبية</p>
+        </div>
+    </footer>
+
+    <!-- Single Page App Routing JavaScript -->
+    <script>
+        function navigateTo(pageId) {
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            const targetSection = document.getElementById('page-' + pageId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.classList.remove('active', 'text-white', 'bg-accent');
+                btn.classList.add('text-blue-100');
+            });
+
+            const activeBtn = document.getElementById('nav-' + pageId);
+            if (activeBtn) {
+                activeBtn.classList.add('active', 'text-white', 'bg-accent');
+                activeBtn.classList.remove('text-blue-100');
+            }
+
+            document.getElementById('mobile-menu').classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
