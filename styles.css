@@ -66,3 +66,11 @@ body{background:linear-gradient(180deg,#fff 0,#fbfdfd 100%)}
 .media-grid{grid-template-columns:repeat(3,1fr)}
 @media(max-width:860px){.story-editorial{grid-template-columns:1fr;gap:34px}.story-collage{min-height:560px}.video-hero{min-height:470px}.media-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.personal-story{padding:62px 0}.story-editorial{gap:24px}.story-collage{min-height:470px}.story-collage .story-or{inset:0 0 50px 13%;border-radius:20px 20px 70px 20px}.story-collage .story-clinic{width:48%;height:220px;border-width:5px}.video-hero{min-height:500px}.video-scrim{background:linear-gradient(180deg,rgba(5,25,43,.06),rgba(5,25,43,.3) 38%,rgba(5,25,43,.94) 78%)}.play-button{width:88px;height:88px;top:38%}.play-button i{border-top-width:13px;border-bottom-width:13px;border-left-width:20px}.watch-label{top:18px;right:18px}.video-copy{right:22px;left:22px;bottom:25px}.video-copy strong{font-size:30px}.video-copy em{font-size:16px}.media-grid{grid-template-columns:1fr}}
+
+/* Compact specialty cards: icons intentionally removed */
+.specialty-card{min-height:230px!important;padding:24px 26px 64px!important;display:flex;flex-direction:column}
+.specialty-card .num{margin-bottom:12px}
+.specialty-card h3{margin:0 0 12px}
+.specialty-card p{margin-bottom:0}
+.specialty-card .more{right:26px;bottom:22px;display:inline-flex;align-items:center;width:max-content;margin-top:20px;padding-top:10px;border-top:1px solid rgba(9,47,79,.13);line-height:1.2}
+@media(max-width:620px){.specialty-card{min-height:210px!important;padding:22px 22px 62px!important}.specialty-card .more{right:22px;bottom:20px}}
