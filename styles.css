@@ -74,3 +74,13 @@ body{background:linear-gradient(180deg,#fff 0,#fbfdfd 100%)}
 .specialty-card p{margin-bottom:0}
 .specialty-card .more{right:26px;bottom:22px;display:inline-flex;align-items:center;width:max-content;margin-top:20px;padding-top:10px;border-top:1px solid rgba(9,47,79,.13);line-height:1.2}
 @media(max-width:620px){.specialty-card{min-height:210px!important;padding:22px 22px 62px!important}.specialty-card .more{right:22px;bottom:20px}}
+
+/* Redesigned hero hierarchy: doctor identity first */
+.hero-copy .eyebrow{margin-bottom:18px;font-size:12px;letter-spacing:.35px}
+.hero-hook{width:max-content;max-width:100%;margin:0 0 18px;padding:7px 14px;border-right:3px solid var(--gold);background:rgba(255,255,255,.64);color:var(--accent);font-size:clamp(20px,2.25vw,31px);line-height:1.45;font-weight:800}
+.hero-copy .doctor-name{max-width:700px;margin:0 0 14px;color:var(--navy);font-size:clamp(54px,6vw,82px);line-height:1.04;letter-spacing:-2.2px;font-weight:900}
+.hero-copy .specialist{max-width:660px;margin:0;color:var(--navy);font-size:clamp(20px,1.8vw,26px);line-height:1.55}
+.hero-copy .specialist strong{font-weight:800}
+.hero-copy .intro{margin-top:20px}
+@media(max-width:860px){.hero-copy .doctor-name{font-size:clamp(50px,9vw,70px)}.hero-hook{font-size:clamp(20px,4vw,28px)}}
+@media(max-width:620px){.hero-copy .eyebrow{margin-bottom:12px;font-size:11px}.hero-hook{margin-bottom:14px;padding:5px 10px;font-size:19px}.hero-copy .doctor-name{font-size:43px;line-height:1.08;letter-spacing:-1px;margin-bottom:12px}.hero-copy .specialist{font-size:19px;line-height:1.5}.hero-copy .intro{margin-top:16px}}
