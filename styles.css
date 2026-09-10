@@ -120,3 +120,10 @@ body{background:linear-gradient(180deg,#fff 0,#fbfdfd 100%)}
 /* Canadian fellowships as premium text beneath professional title */
 .canadian-fellowships{display:inline-block;width:max-content;max-width:100%;margin:10px 0 0;color:#C59A32!important;font-size:clamp(18px,1.7vw,23px);line-height:1.45;font-weight:900;letter-spacing:.1px;text-shadow:0 2px 0 rgba(9,47,79,.18),0 5px 16px rgba(9,47,79,.22)}
 @media(max-width:620px){.canadian-fellowships{margin-top:8px;font-size:18px}}
+
+/* Stronger Canadian fellowship hierarchy */
+.canadian-fellowships{display:block;width:max-content;max-width:100%;margin:14px 0 0;padding:13px 17px 12px;border-right:4px solid #D7B457;border-radius:8px;background:linear-gradient(90deg,rgba(9,47,79,.09),rgba(255,255,255,.28));text-shadow:none}
+.canadian-fellowships strong,.canadian-fellowships span{display:block}
+.canadian-fellowships strong{color:#B8891E;font-size:clamp(20px,1.9vw,27px);line-height:1.35;font-weight:900;text-shadow:0 2px 1px rgba(9,47,79,.2),0 6px 18px rgba(9,47,79,.18)}
+.canadian-fellowships span{margin-top:5px;color:var(--navy);font-size:clamp(14px,1.15vw,17px);line-height:1.55;font-weight:700}
+@media(max-width:620px){.canadian-fellowships{margin-top:11px;padding:11px 13px 10px}.canadian-fellowships strong{font-size:19px}.canadian-fellowships span{font-size:13px}}
