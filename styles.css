@@ -172,3 +172,21 @@ section.hero{padding:0!important}
 .personal-story{display:none!important}
 @media(max-width:1000px){.why-layout{grid-template-columns:1fr}.why-portrait{min-height:560px}.why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.why-layout{gap:18px}.why-portrait{min-height:430px;border-radius:17px}.why-grid{grid-template-columns:1fr;gap:14px}.why-card,.why-card.featured{min-height:auto;height:auto}.why-card h3,.why-card.featured h3{font-size:21px}}
+
+
+/* Leadership and care section — clinic portrait with editorial copy */
+.leadership-section{position:relative;padding:88px 0;background:linear-gradient(135deg,#F7FAFA 0%,#FFFFFF 52%,#F1F7F6 100%);overflow:hidden}
+.leadership-section:before{content:"";position:absolute;width:430px;height:430px;right:-230px;top:-230px;border-radius:50%;border:1px solid rgba(201,164,75,.22);box-shadow:0 0 0 55px rgba(201,164,75,.035)}
+.leadership-grid{position:relative;display:grid;grid-template-columns:minmax(360px,.82fr) minmax(0,1.18fr);grid-template-areas:"photo copy";gap:64px;align-items:center;direction:ltr}
+.leadership-photo{grid-area:photo;position:relative;margin:0;height:650px;border-radius:26px 26px 110px 26px;overflow:hidden;background:#E8F0F1;box-shadow:0 30px 75px rgba(9,47,79,.18)}
+.leadership-photo:after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.7);border-radius:inherit;pointer-events:none}
+.leadership-photo img{width:100%;height:100%;object-fit:cover;object-position:center 16%}
+.leadership-copy{grid-area:copy;direction:rtl;text-align:right}
+.leadership-copy .eyebrow{margin-bottom:18px;color:var(--teal)}
+.leadership-copy h2{max-width:680px;margin-bottom:26px;font-size:clamp(38px,4.5vw,62px);line-height:1.2}
+.leadership-copy h2 em{color:#B8891E}
+.leadership-copy p{max-width:720px;margin-top:17px;color:#435B69;font-size:17px;line-height:2}
+.leadership-copy p strong{color:var(--navy);font-weight:900}
+@media(max-width:1000px){.leadership-grid{grid-template-columns:minmax(300px,.8fr) minmax(0,1.2fr);gap:38px}.leadership-photo{height:590px}.leadership-copy p{font-size:16px;line-height:1.9}}
+@media(max-width:760px){.leadership-section{padding:62px 0}.leadership-grid{grid-template-columns:1fr;grid-template-areas:"copy" "photo";gap:30px}.leadership-copy h2{font-size:clamp(34px,9vw,48px);margin-bottom:20px}.leadership-copy p{font-size:16px;line-height:1.85}.leadership-photo{height:510px;border-radius:20px 20px 70px 20px}}
+@media(max-width:620px){.leadership-section{padding:54px 0}.leadership-grid{gap:26px}.leadership-photo{height:430px}.leadership-photo img{object-position:center 14%}.leadership-copy .eyebrow{margin-bottom:12px}.leadership-copy h2{font-size:35px}.leadership-copy p{margin-top:14px}}
