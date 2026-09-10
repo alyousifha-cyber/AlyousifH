@@ -225,7 +225,7 @@ section.hero{padding:0!important}
 .media-grid-four .media-card,.media-grid-four .featured-video{grid-column:auto;grid-row:auto;display:flex;flex-direction:column;min-width:0;min-height:410px;border:1px solid rgba(9,47,79,.1);border-top:5px solid #166A91;border-radius:16px;background:linear-gradient(145deg,#fff,#EAF5FB);box-shadow:0 14px 38px rgba(9,47,79,.08);overflow:hidden;transform:none}
 .media-grid-four .media-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(9,47,79,.13)}
 .media-video{position:relative;height:190px;background:#082C4A;overflow:hidden}
-.media-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.media-video iframe,.media-video video{position:absolute;inset:0;width:100%;height:100%;border:0}.media-video video{object-fit:cover;background:#082C4A}
 .media-cover{height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:linear-gradient(145deg,#0A3858,#0D615B);color:#fff}
 .media-cover span{font:900 29px/1 Tajawal,Arial,sans-serif;letter-spacing:1px}
 .media-cover small{color:#F0D27D;font-size:13px;font-weight:800}
