@@ -84,3 +84,17 @@ body{background:linear-gradient(180deg,#fff 0,#fbfdfd 100%)}
 .hero-copy .intro{margin-top:20px}
 @media(max-width:860px){.hero-copy .doctor-name{font-size:clamp(50px,9vw,70px)}.hero-hook{font-size:clamp(20px,4vw,28px)}}
 @media(max-width:620px){.hero-copy .eyebrow{margin-bottom:12px;font-size:11px}.hero-hook{margin-bottom:14px;padding:5px 10px;font-size:19px}.hero-copy .doctor-name{font-size:43px;line-height:1.08;letter-spacing:-1px;margin-bottom:12px}.hero-copy .specialist{font-size:19px;line-height:1.5}.hero-copy .intro{margin-top:16px}}
+
+/* Hero care path and Canadian fellowship emphasis */
+.care-path{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:17px 0 0;color:var(--navy);font-size:14px;font-weight:800}
+.care-path span{padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.78);border:1px solid rgba(9,47,79,.12)}
+.care-path i{width:14px;height:1px;background:var(--gold)}
+.hero-photo .photo-shade{background:linear-gradient(180deg,transparent 68%,rgba(7,28,47,.18) 100%)}
+.floating-card{left:-24px;bottom:34px;width:285px;display:flex;align-items:center;gap:15px;padding:18px 20px;border:1px solid rgba(201,164,75,.5);border-top:0;background:rgba(255,255,255,.96);box-shadow:0 22px 60px rgba(9,47,79,.28)}
+.credential-count{display:grid!important;place-items:center;flex:0 0 56px;width:56px;height:56px;border-radius:16px;background:linear-gradient(145deg,var(--gold),#E0C472);color:var(--navy)!important;font-size:24px!important;font-weight:900}
+.credential-card>div{min-width:0}
+.credential-card .credential-kicker{color:#8B6719!important;font-size:14px;font-weight:900}
+.credential-card strong{font-size:24px;line-height:1.25}
+.credential-card small{margin-top:3px;font-size:12px;line-height:1.45}
+@media(max-width:860px){.floating-card{left:18px;width:270px}.care-path{margin-bottom:2px}}
+@media(max-width:620px){.care-path{gap:7px;margin-top:14px}.care-path span{padding:6px 9px;font-size:12px}.care-path i{width:8px}.floating-card{left:8px;bottom:-22px;width:255px;padding:14px 15px}.credential-count{flex-basis:48px;width:48px;height:48px;font-size:21px!important}.credential-card strong{font-size:21px}}
