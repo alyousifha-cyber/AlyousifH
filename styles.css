@@ -275,3 +275,13 @@ section.hero{padding:0!important}
 .science-card-detailed ul{margin:14px 0 18px;padding-right:20px;color:#385363;font-size:14px;line-height:1.9}
 .science-card-detailed .media-source{margin-top:auto}
 @media(max-width:700px){.science-grid,.science-grid-two{grid-template-columns:1fr}.science-card-detailed{min-height:0;padding:24px}.science-card-detailed h3{font-size:24px}}
+
+/* Brand-aligned tones for patient guide cards */
+.science-card-detailed{position:relative;overflow:hidden;background:linear-gradient(145deg,#FFFFFF 0%,#F3F8FA 100%);border-color:rgba(9,47,79,.12);border-top-color:var(--card-accent,#176C8F)}
+.science-card-detailed::before{content:"";position:absolute;inset:0 0 auto;height:92px;background:linear-gradient(180deg,color-mix(in srgb,var(--card-accent,#176C8F) 8%,transparent),transparent);pointer-events:none}
+.science-card-detailed> *{position:relative}
+.science-card-detailed>span{background:color-mix(in srgb,var(--card-accent,#176C8F) 12%,#fff);color:var(--card-accent,#176C8F)}
+.science-card-detailed .media-source{color:var(--card-accent,#176C8F);border-top-color:color-mix(in srgb,var(--card-accent,#176C8F) 24%,transparent)}
+.science-tone-navy{--card-accent:#123D63;background:linear-gradient(145deg,#FFFFFF,#EEF4F8)}
+.science-tone-teal{--card-accent:#14766F;background:linear-gradient(145deg,#FFFFFF,#EDF7F5)}
+.science-tone-gold{--card-accent:#A7781E;background:linear-gradient(145deg,#FFFFFF,#FBF6E9)}
