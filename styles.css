@@ -158,3 +158,17 @@ section.hero{padding:0!important}
 .why-card p,.why-card.featured p{color:#435B69;font-size:16px;line-height:1.8;font-weight:500}
 .why-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(9,47,79,.12)}
 @media(max-width:620px){.why-heading{margin-bottom:24px}.why-heading h2{font-size:31px}.why-card,.why-card.featured{min-height:220px;padding:24px 23px}.why-card h3,.why-card.featured h3{font-size:22px}.why-card p,.why-card.featured p{font-size:15px}}
+
+/* Integrated why section: portrait right, six cards left */
+.why-layout{display:grid;grid-template-columns:minmax(320px,.72fr) minmax(0,1.45fr);gap:24px;align-items:stretch}
+.why-portrait{position:relative;margin:0;min-height:780px;border-radius:22px;overflow:hidden;background:#EAF1F3;box-shadow:0 20px 58px rgba(9,47,79,.14)}
+.why-portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.why-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.why-card,.why-card.featured{min-height:0;height:100%;padding:24px 23px}
+.why-grid .why-card:nth-child(5){background:linear-gradient(145deg,#fff,#FFF0F2);border-top-color:#B84E66}
+.why-grid .why-card:nth-child(6){background:linear-gradient(145deg,#fff,#EEF4FF);border-top-color:#416FA7}
+.why-card h3,.why-card.featured h3{margin:12px 0 9px;font-size:22px}
+.why-card p,.why-card.featured p{font-size:15px;line-height:1.72}
+.personal-story{display:none!important}
+@media(max-width:1000px){.why-layout{grid-template-columns:1fr}.why-portrait{min-height:560px}.why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.why-layout{gap:18px}.why-portrait{min-height:430px;border-radius:17px}.why-grid{grid-template-columns:1fr;gap:14px}.why-card,.why-card.featured{min-height:auto;height:auto}.why-card h3,.why-card.featured h3{font-size:21px}}
