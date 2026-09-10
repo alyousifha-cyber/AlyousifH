@@ -285,3 +285,19 @@ section.hero{padding:0!important}
 .science-tone-navy{--card-accent:#123D63;background:linear-gradient(145deg,#FFFFFF,#EEF4F8)}
 .science-tone-teal{--card-accent:#14766F;background:linear-gradient(145deg,#FFFFFF,#EDF7F5)}
 .science-tone-gold{--card-accent:#A7781E;background:linear-gradient(145deg,#FFFFFF,#FBF6E9)}
+
+
+/* Diagnostic imagery inside patient guide cards */
+.science-card-detailed{display:grid;grid-template-columns:152px minmax(0,1fr);gap:22px;direction:ltr;align-items:stretch}
+.science-card-detailed::before{height:100%}
+.science-card-thumb{margin:0;min-height:100%;border-radius:18px;overflow:hidden;background:#DDE8ED;box-shadow:inset 0 0 0 1px rgba(9,47,79,.08)}
+.science-card-thumb img{width:100%;height:100%;min-height:290px;display:block;object-fit:cover;filter:saturate(.78) contrast(1.04)}
+.science-card-copy{min-width:0;display:flex;flex-direction:column;direction:rtl;text-align:right}
+.science-card-copy>span{align-self:flex-start;background:color-mix(in srgb,var(--card-accent,#176C8F) 12%,#fff);color:var(--card-accent,#176C8F)}
+.science-card-copy .media-source{margin-top:auto}
+@media(max-width:700px){
+  .science-card-detailed{grid-template-columns:1fr;gap:18px;padding:18px}
+  .science-card-thumb{height:180px;min-height:0}
+  .science-card-thumb img{min-height:0;height:180px;object-position:center}
+  .science-card-copy h3{margin-top:14px}
+}
