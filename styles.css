@@ -116,3 +116,7 @@ body{background:linear-gradient(180deg,#fff 0,#fbfdfd 100%)}
 .hero-visual .credential-count{background:linear-gradient(145deg,#E8CC7A,#C9A44B);box-shadow:0 8px 22px rgba(0,0,0,.2)}
 @media(max-width:860px){.hero-visual .floating-card{left:auto;right:auto;bottom:auto;width:calc(100% - 28px);margin:-8px auto 0}}
 @media(max-width:620px){.hero-visual .floating-card{left:auto;right:auto;bottom:auto;width:calc(100% - 20px);margin:-5px auto 0;padding:16px;border-radius:0 0 15px 15px}.hero-visual .credential-card strong{font-size:22px}}
+
+/* Canadian fellowships as premium text beneath professional title */
+.canadian-fellowships{display:inline-block;width:max-content;max-width:100%;margin:10px 0 0;color:#C59A32!important;font-size:clamp(18px,1.7vw,23px);line-height:1.45;font-weight:900;letter-spacing:.1px;text-shadow:0 2px 0 rgba(9,47,79,.18),0 5px 16px rgba(9,47,79,.22)}
+@media(max-width:620px){.canadian-fellowships{margin-top:8px;font-size:18px}}
