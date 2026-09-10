@@ -105,3 +105,14 @@ body{background:linear-gradient(180deg,#fff 0,#fbfdfd 100%)}
 .hero-copy .intro{margin-top:24px}
 @media(max-width:860px){.hero-copy .doctor-name{font-size:clamp(39px,6.2vw,54px)}}
 @media(max-width:620px){.hero-copy .doctor-name{font-size:clamp(29px,8.2vw,38px);letter-spacing:-.8px;white-space:nowrap}.hero-copy .intro{margin-top:20px}}
+
+/* Remove duplicate trust strip and place fellowships beneath portrait */
+.trust-strip{display:none!important}
+.hero-visual{display:flex;flex-direction:column}
+.hero-visual .floating-card{position:relative;left:auto;right:auto;bottom:auto;width:calc(100% - 34px);margin:-10px auto 0;padding:20px 22px;border:0;border-radius:0 0 18px 18px;background:linear-gradient(120deg,#082C4A,#0C4F5D);box-shadow:0 22px 54px rgba(9,47,79,.25);z-index:5}
+.hero-visual .credential-card .credential-kicker{color:#E5C46B!important;font-size:15px}
+.hero-visual .credential-card strong{color:#fff;font-size:26px}
+.hero-visual .credential-card small{color:#D9E8EA;font-size:13px}
+.hero-visual .credential-count{background:linear-gradient(145deg,#E8CC7A,#C9A44B);box-shadow:0 8px 22px rgba(0,0,0,.2)}
+@media(max-width:860px){.hero-visual .floating-card{left:auto;right:auto;bottom:auto;width:calc(100% - 28px);margin:-8px auto 0}}
+@media(max-width:620px){.hero-visual .floating-card{left:auto;right:auto;bottom:auto;width:calc(100% - 20px);margin:-5px auto 0;padding:16px;border-radius:0 0 15px 15px}.hero-visual .credential-card strong{font-size:22px}}
