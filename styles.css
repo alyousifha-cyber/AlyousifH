@@ -98,3 +98,10 @@ body{background:linear-gradient(180deg,#fff 0,#fbfdfd 100%)}
 .credential-card small{margin-top:3px;font-size:12px;line-height:1.45}
 @media(max-width:860px){.floating-card{left:18px;width:270px}.care-path{margin-bottom:2px}}
 @media(max-width:620px){.care-path{gap:7px;margin-top:14px}.care-path span{padding:6px 9px;font-size:12px}.care-path i{width:8px}.floating-card{left:8px;bottom:-22px;width:255px;padding:14px 15px}.credential-count{flex-basis:48px;width:48px;height:48px;font-size:21px!important}.credential-card strong{font-size:21px}}
+
+/* Final hero name alignment */
+.hero-copy .doctor-name{max-width:none;font-size:clamp(46px,4.7vw,66px);line-height:1.12;letter-spacing:-1.7px;white-space:nowrap}
+.hero-copy .specialist{margin-bottom:0}
+.hero-copy .intro{margin-top:24px}
+@media(max-width:860px){.hero-copy .doctor-name{font-size:clamp(39px,6.2vw,54px)}}
+@media(max-width:620px){.hero-copy .doctor-name{font-size:clamp(29px,8.2vw,38px);letter-spacing:-.8px;white-space:nowrap}.hero-copy .intro{margin-top:20px}}
