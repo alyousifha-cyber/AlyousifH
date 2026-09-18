@@ -313,6 +313,14 @@ section.hero{padding:0!important}
  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
  .reveal{opacity:1!important;transform:none!important}
 }
+
+/* Tighter homepage section rhythm after removing the hero credential chips. */
+#specialties,.why-section,.personal-story,.leadership-section,.science-section,.media-section,.contact{padding-top:68px;padding-bottom:68px}
+.hero-grid{padding-top:42px;padding-bottom:42px}
+@media(max-width:620px){
+ #specialties,.why-section,.personal-story,.leadership-section,.science-section,.media-section,.contact{padding-top:46px;padding-bottom:46px}
+ .hero-grid{padding-top:20px!important;padding-bottom:28px!important}
+}
 @media(max-width:860px){
  .nav nav.open{display:flex;flex-direction:column;align-items:stretch;gap:4px}
  .nav nav.open a{min-height:44px;display:flex;align-items:center}
