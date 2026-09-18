@@ -321,6 +321,28 @@ section.hero{padding:0!important}
  #specialties,.why-section,.personal-story,.leadership-section,.science-section,.media-section,.contact{padding-top:46px;padding-bottom:46px}
  .hero-grid{padding-top:20px!important;padding-bottom:28px!important}
 }
+
+/* More compact medical-guide cards while preserving two-column readability. */
+.science-grid-two{gap:14px}
+.science-grid-two .science-card-detailed{grid-template-columns:126px minmax(0,1fr);gap:16px;min-height:270px;padding:20px}
+.science-grid-two .science-card-thumb{border-radius:14px}
+.science-grid-two .science-card-thumb img{min-height:228px}
+.science-grid-two .science-card-copy h3{font-size:24px;margin:12px 0 7px}
+.science-grid-two .science-card-copy p{font-size:14px;line-height:1.65}
+.science-grid-two .science-card-copy ul{margin:10px 0 12px;font-size:13px;line-height:1.7}
+.science-grid-two .science-card-copy .media-source{padding-top:10px;font-size:13px}
+@media(max-width:700px){
+ .science-grid-two .science-card-detailed{grid-template-columns:116px minmax(0,1fr);gap:14px;min-height:0;padding:16px}
+ .science-grid-two .science-card-thumb{height:168px}
+ .science-grid-two .science-card-thumb img{height:168px;min-height:0}
+ .science-grid-two .science-card-copy h3{font-size:21px;margin-top:10px}
+ .science-grid-two .science-card-copy p{font-size:13px}
+ .science-grid-two .science-card-copy ul{font-size:12px;line-height:1.6}
+}
+@media(max-width:430px){
+ .science-grid-two .science-card-detailed{grid-template-columns:1fr}
+ .science-grid-two .science-card-thumb,.science-grid-two .science-card-thumb img{height:150px}
+}
 @media(max-width:860px){
  .nav nav.open{display:flex;flex-direction:column;align-items:stretch;gap:4px}
  .nav nav.open a{min-height:44px;display:flex;align-items:center}
