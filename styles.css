@@ -426,3 +426,54 @@ section.hero{padding:0!important}
 @media(min-width:621px){
  body{padding-bottom:0}
 }
+
+/* H2 patient-first comparison page */
+.h2-hero .h2-patient-title{max-width:720px;margin:0;color:var(--navy);font-size:clamp(48px,5.4vw,76px);line-height:1.12;letter-spacing:-1.8px;font-weight:900}
+.h2-hero .h2-patient-title em{color:var(--accent)}
+.h2-hero .h2-patient-intro{max-width:680px;margin:24px 0 28px;font-size:19px;line-height:1.9;color:#465E6C}
+.h2-pain-section{padding-top:72px;padding-bottom:72px;background:#fff}
+.h2-pain-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.h2-pain-card{border:1px solid rgba(9,47,79,.13);border-radius:16px;background:linear-gradient(145deg,#fff,#F3F8FA);box-shadow:0 10px 30px rgba(9,47,79,.05);overflow:hidden}
+.h2-pain-card summary{min-height:92px;padding:20px;display:flex;align-items:center;gap:12px;color:var(--navy);cursor:pointer;list-style:none}
+.h2-pain-card summary::-webkit-details-marker{display:none}
+.h2-pain-card summary span{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:#E2F1F1;color:#14766F;font-size:16px}
+.h2-pain-card summary strong{font-size:19px}
+.h2-pain-card summary::after{content:"+";margin-right:auto;color:var(--accent);font-size:24px;font-weight:500}
+.h2-pain-card[open] summary::after{content:"−"}
+.h2-pain-card>div{padding:0 20px 18px;border-top:1px solid rgba(9,47,79,.09)}
+.h2-pain-card>div a{display:block;padding:10px 0;border-bottom:1px solid rgba(9,47,79,.08);color:var(--accent);font-size:14px;font-weight:800}
+.h2-pain-card>div a:last-child{border-bottom:0}
+.h2-trust-band{padding:0;background:linear-gradient(135deg,#0F2C59,#124D5C);color:#fff}
+.h2-trust-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+.h2-trust-grid>div{min-height:126px;padding:24px 18px;display:flex;flex-direction:column;justify-content:center;border-left:1px solid rgba(255,255,255,.14)}
+.h2-trust-grid>div:last-child{border-left:0}
+.h2-trust-grid strong{color:#fff;font-size:19px;line-height:1.4}
+.h2-trust-grid span{margin-top:6px;color:#D8E4E9;font-size:13px;line-height:1.55}
+.h2-visit-section{padding-top:72px;padding-bottom:72px}
+.h2-visit-layout{display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:start}
+.h2-visit-steps{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.h2-visit-steps li{min-height:134px;padding:20px;display:flex;gap:15px;border:1px solid rgba(9,47,79,.1);border-radius:16px;background:#fff}
+.h2-visit-steps li:last-child{grid-column:1/-1;min-height:112px}
+.h2-visit-steps li>span{width:39px;height:39px;flex:0 0 39px;display:grid;place-items:center;border-radius:12px;background:#EAF3F7;color:var(--accent);font-size:12px;font-weight:900}
+.h2-visit-steps strong{display:block;color:var(--navy);font-size:20px}
+.h2-visit-steps p{margin-top:5px;font-size:14px;line-height:1.7}
+.h2-bring-card{padding:30px;border-radius:20px;background:linear-gradient(145deg,#fff,#EEF6F4);border:1px solid rgba(20,118,111,.16);box-shadow:0 16px 44px rgba(9,47,79,.08)}
+.h2-bring-card h3{font-size:28px;margin-bottom:17px}
+.h2-bring-card ul{margin:0 0 24px;padding-right:22px;color:#385363;line-height:2}
+.h2-bring-card .button{width:100%}
+@media(max-width:980px){.h2-pain-grid{grid-template-columns:1fr 1fr}.h2-trust-grid{grid-template-columns:repeat(2,1fr)}.h2-trust-grid>div{border-bottom:1px solid rgba(255,255,255,.14)}.h2-visit-layout{grid-template-columns:1fr}}
+@media(max-width:620px){
+ .h2-hero .h2-patient-title{font-size:39px;line-height:1.16;letter-spacing:-1px}
+ .h2-hero .h2-patient-intro{margin:17px 0 21px;font-size:15px;line-height:1.8}
+ .h2-pain-section,.h2-visit-section{padding-top:44px;padding-bottom:44px}
+ .h2-pain-grid{grid-template-columns:1fr;gap:9px}
+ .h2-pain-card summary{min-height:68px;padding:15px 17px}
+ .h2-pain-card summary strong{font-size:17px}
+ .h2-trust-grid{grid-template-columns:1fr 1fr}
+ .h2-trust-grid>div{min-height:104px;padding:17px 14px}
+ .h2-trust-grid strong{font-size:16px}
+ .h2-trust-grid span{font-size:11px}
+ .h2-visit-steps{grid-template-columns:1fr;gap:9px}
+ .h2-visit-steps li,.h2-visit-steps li:last-child{grid-column:auto;min-height:0;padding:17px}
+ .h2-bring-card{padding:22px}
+}
