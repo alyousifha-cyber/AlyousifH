@@ -347,3 +347,82 @@ section.hero{padding:0!important}
  .nav nav.open{display:flex;flex-direction:column;align-items:stretch;gap:4px}
  .nav nav.open a{min-height:44px;display:flex;align-items:center}
 }
+
+/* Phone-first presentation: deliberately lighter and faster to scan than desktop. */
+@media(max-width:620px){
+ html,body{max-width:100%;overflow-x:hidden}
+ .wrap{width:min(100% - 32px,1180px)}
+ .site-header{background:rgba(255,255,255,.97);backdrop-filter:blur(12px)}
+ .nav{min-height:64px}
+ .brand{font-size:16px;line-height:1.3}
+ .brand small{display:none}
+ .menu-toggle{min-width:46px;min-height:46px}
+ .nav nav.open{position:absolute;inset:64px 16px auto;padding:10px;border:1px solid rgba(9,47,79,.1);border-radius:16px;background:#fff;box-shadow:0 18px 45px rgba(9,47,79,.16)}
+
+ .hero{min-height:auto}
+ .hero-grid{gap:22px!important;padding-top:18px!important;padding-bottom:34px!important}
+ .hero-copy .eyebrow{margin-bottom:10px;font-size:11px}
+ .hero-hook{margin-bottom:12px;padding:5px 10px;font-size:17px;line-height:1.4}
+ .hero-copy .doctor-name{margin-bottom:8px;font-size:38px;line-height:1.12;letter-spacing:-1px}
+ .hero-copy .specialist{font-size:17px;line-height:1.55}
+ .hero-copy .intro{margin-top:14px;font-size:15px;line-height:1.8}
+ .canadian-fellowships{margin-top:13px;padding:10px 12px;font-size:12px;line-height:1.65}
+ .actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}
+ .actions .button{min-width:0;min-height:48px;padding:10px 8px;font-size:14px;text-align:center}
+ .hero-visual{order:2}
+ .hero-photo{height:320px;border-width:4px;border-radius:22px}
+ .hero-photo>img{object-position:center 9%!important}
+ .hero-visual .floating-card{width:calc(100% - 22px);padding:14px 16px}
+ .hero-visual .credential-card strong{font-size:20px}
+ .hero-visual .credential-card small{font-size:12px}
+
+ #specialties,.why-section,.personal-story,.leadership-section,.science-section,.media-section,.contact{padding-top:42px;padding-bottom:42px}
+ .section-heading{margin-bottom:22px}
+ .section-heading h2,.science-heading h2,.media-heading h2{font-size:29px;line-height:1.32}
+ .section-heading p{font-size:14px;line-height:1.75}
+ .specialty-grid.six{grid-template-columns:1fr;gap:11px}
+ .specialty-card{min-height:0!important;padding:18px 19px 54px!important;border-radius:15px}
+ .specialty-card h3{font-size:21px;margin-bottom:7px}
+ .specialty-card p{font-size:14px;line-height:1.7}
+ .specialty-card .more{right:19px;bottom:17px}
+
+ .why-layout{grid-template-columns:1fr;gap:18px}
+ .why-portrait{min-height:270px;border-radius:18px}
+ .why-portrait img{object-position:center 18%}
+ .why-grid{grid-template-columns:1fr;gap:11px}
+ .why-card{min-height:0;padding:20px}
+ .why-card h3{font-size:21px}
+
+ .leadership-section{padding-top:42px}
+ .leadership-grid{gap:22px}
+ .leadership-copy h2{font-size:30px;line-height:1.3}
+ .leadership-copy p{font-size:14px;line-height:1.8}
+ .leadership-photo{height:330px;border-radius:18px 18px 55px 18px}
+ .professional-pillars{gap:10px;margin-top:20px}
+ .professional-pillars article{padding:17px;min-height:0}
+ .professional-pillars article>span{margin-bottom:9px;font-size:11px}
+ .professional-pillars article>strong{font-size:19px}
+ .professional-pillars article>p{font-size:13px;line-height:1.7}
+
+ .science-heading,.media-heading{margin-bottom:20px}
+ .science-grid-two{gap:10px}
+ .science-grid-two .science-card-detailed{grid-template-columns:104px minmax(0,1fr);gap:12px;min-height:128px;padding:12px;border-radius:14px}
+ .science-grid-two .science-card-thumb{height:104px;min-height:0;border-radius:11px}
+ .science-grid-two .science-card-thumb img{height:104px;min-height:0;object-position:center}
+ .science-grid-two .science-card-copy>span{padding:4px 7px;font-size:10px}
+ .science-grid-two .science-card-copy h3{margin:7px 0 5px;font-size:18px;line-height:1.35}
+ .science-grid-two .science-card-copy p,.science-grid-two .science-card-copy ul{display:none}
+ .science-grid-two .science-card-copy .media-source{margin-top:auto;padding-top:5px;font-size:12px}
+
+ .media-grid.media-grid-four{gap:11px}
+ .media-video,.media-cover{height:190px}
+ .media-grid-four .media-body{padding:18px}
+ .media-grid-four h3{font-size:19px}
+ .media-grid-four p{font-size:14px;line-height:1.7}
+ .fixed-mobile-cta,.mobile-cta{min-height:52px}
+ body{padding-bottom:74px}
+}
+
+@media(min-width:621px){
+ body{padding-bottom:0}
+}
