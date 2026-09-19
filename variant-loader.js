@@ -29,6 +29,8 @@
       '<article class="pillar-leadership"><span>04 · قيادة صحية</span><strong>إدارة العمليات الجراحية</strong><p>قيادة غرف العمليات وتطوير الكفاءة التشغيلية وجودة وسلامة الخدمات الجراحية ضمن تجمع الرياض الصحي الأول.</p></article>',
       '<article class="pillar-leadership"><span>04 · إدارة طبية وقيادة جراحية</span><strong>تطوير الخدمات والعمليات الجراحية</strong><p>خبرة في الإدارة الطبية وقيادة العمليات الجراحية، وتطوير الكفاءة التشغيلية وجودة وسلامة الخدمات؛ بما يدعم رعاية أكثر تنظيمًا وأمانًا للمريض.</p></article>'
     );
+    html = html.replace('<body>', '<body class="h2-page">');
+    html = html.replaceAll('<article class="pillar-', '<article class="h2-animated-pillar pillar-');
     html = html.replaceAll('ناقش حالتك عبر واتساب', 'تواصل معنا');
   }
 
