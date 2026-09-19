@@ -25,6 +25,7 @@
     html = html.replace(/<section class="hero" id="home">[\s\S]*?<\/section><section id="specialties"/, hero + patientSections + '<section id="specialties"');
     html = html.replace('<a href="#specialties">التخصصات</a><a href="#why">لماذا د. حسين؟</a>', '<a href="#first-visit">الزيارة الأولى</a><a href="#specialties">التخصصات</a><a href="#why">منهج الرعاية</a>');
     html = html.replace('جراحة · أكاديميا · قيادة', 'خبرة جراحية تصنع المعرفة وتقود الرعاية');
+    html = html.replaceAll('ناقش حالتك عبر واتساب', 'تواصل معنا');
   }
 
   html = html.replace('<head>', '<head><meta name="robots" content="noindex,nofollow">');
