@@ -452,3 +452,26 @@ section.hero{padding:0!important}
  .h2-visit-steps li,.h2-visit-steps li:last-child{grid-column:auto;min-height:0;padding:17px}
  .h2-bring-card{padding:22px}
 }
+
+/* H2 leadership cards: restrained, sequential motion on section reveal. */
+.h2-page .h2-animated-pillar{opacity:0;translate:0 24px;scale:.985;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease}
+.h2-page .h2-animated-pillar::after{content:"";position:absolute;z-index:2;top:0;right:0;left:0;height:6px;background:var(--pillar-accent);transform:scaleX(0);transform-origin:right}
+.h2-page .leadership-copy.visible .h2-animated-pillar{animation:h2-pillar-in .72s cubic-bezier(.2,.75,.25,1) forwards}
+.h2-page .leadership-copy.visible .h2-animated-pillar::after{animation:h2-stripe-in .78s cubic-bezier(.2,.75,.25,1) forwards}
+.h2-page .leadership-copy.visible .h2-animated-pillar:nth-child(1){animation-delay:.08s}
+.h2-page .leadership-copy.visible .h2-animated-pillar:nth-child(2){animation-delay:.20s}
+.h2-page .leadership-copy.visible .h2-animated-pillar:nth-child(3){animation-delay:.32s}
+.h2-page .leadership-copy.visible .h2-animated-pillar:nth-child(4){animation-delay:.44s}
+.h2-page .leadership-copy.visible .h2-animated-pillar:nth-child(1)::after{animation-delay:.12s}
+.h2-page .leadership-copy.visible .h2-animated-pillar:nth-child(2)::after{animation-delay:.24s}
+.h2-page .leadership-copy.visible .h2-animated-pillar:nth-child(3)::after{animation-delay:.36s}
+.h2-page .leadership-copy.visible .h2-animated-pillar:nth-child(4)::after{animation-delay:.48s}
+.h2-page .leadership-copy.visible .h2-animated-pillar>span{animation:h2-badge-pulse .48s ease-out both;animation-delay:.72s}
+.h2-page .h2-animated-pillar:hover,.h2-page .h2-animated-pillar:active{transform:translateY(-5px);box-shadow:0 22px 46px rgba(15,44,89,.15)}
+@keyframes h2-pillar-in{from{opacity:0;translate:0 24px;scale:.985}to{opacity:1;translate:0 0;scale:1}}
+@keyframes h2-stripe-in{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes h2-badge-pulse{0%{transform:scale(.96)}55%{transform:scale(1.045)}100%{transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){
+ .h2-page .h2-animated-pillar{opacity:1;translate:none;scale:none;transform:none;animation:none!important}
+ .h2-page .h2-animated-pillar::after,.h2-page .h2-animated-pillar>span{transform:none;animation:none!important}
+}
