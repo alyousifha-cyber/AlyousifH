@@ -4,4 +4,3 @@
 .exercise-card-video iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#092f4f}
 @media(max-width:620px){.exercise-card-video{margin-top:14px}.exercise-card-video span{font-size:12.5px}}
 .local-care-note{margin:1rem 0 0;padding:.85rem 1rem;border-inline-start:3px solid var(--gold,#c89b3c);border-radius:.65rem;background:rgba(255,255,255,.72);color:#30495d;font-size:.98rem;line-height:1.8}
-.local-care-note{margin:1rem 0 0;padding:.85rem 1rem;border-inline-start:3px solid var(--gold,#c89b3c);border-radius:.65rem;background:rgba(255,255,255,.72);color:#30495d;font-size:.98rem;line-height:1.8}
