@@ -1,8 +1,5 @@
 const menu=document.querySelector('.menu-toggle');const nav=document.getElementById('navigation');if(menu&&nav){const closeMenu=()=>{menu.setAttribute('aria-expanded','false');nav.classList.remove('open')};menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);if(open)nav.querySelector('a')?.focus()});nav.addEventListener('click',e=>{if(e.target.closest('a'))closeMenu()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){closeMenu();menu.focus()}});document.addEventListener('click',e=>{if(nav.classList.contains('open')&&!nav.contains(e.target)&&!menu.contains(e.target))closeMenu()})}
 
-// Keep the homepage fully patient-facing: no CV links or CV teaser.
-document.querySelectorAll('a[href="professional.html"]').forEach(a=>a.remove());document.querySelector('.professional-teaser')?.remove();
-
 // Force the supplied portrait to be a major visual element.
 const heroImg=document.querySelector('.hero-photo img');if(heroImg){heroImg.loading='eager';heroImg.fetchPriority='high';heroImg.style.cssText='width:100%;height:100%;display:block;object-fit:cover;object-position:center 10%;position:relative;z-index:1';}
 
