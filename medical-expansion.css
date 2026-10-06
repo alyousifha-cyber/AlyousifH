@@ -1,0 +1,19 @@
+.medical-anatomy{background:#f5f7fa}
+.medical-anatomy-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.medical-anatomy figure{margin:0;padding:20px;background:#fff;border:1px solid #dce4ee;border-radius:22px;box-shadow:0 12px 32px #0f2c5908}
+.anatomy-image-link{display:block;background:#fff;border-radius:12px;overflow:hidden}
+.medical-anatomy img{display:block;width:100%;height:clamp(300px,38vw,470px);object-fit:contain;background:#fff}
+.medical-anatomy figcaption{font-size:15px;line-height:1.9;color:#4c5f75;margin-top:16px}
+.medical-anatomy figcaption small{display:block;margin-top:8px;font-size:12px;line-height:1.8}
+.medical-anatomy figcaption a,.medical-sources a{color:#20579a;text-decoration:underline;text-underline-offset:3px}
+.anatomy-explanation{display:grid;gap:18px}
+.anatomy-explanation article{padding:0 20px 0 0;border-right:3px solid #b99564}
+.anatomy-explanation h3{color:#0f2c59;margin:0 0 8px;font-size:22px}
+.anatomy-explanation p{margin:0;color:#516279;line-height:1.95;font-size:17px}
+.medical-cards p{line-height:2;font-size:17px}
+.medical-sources{border-top:1px solid #e2e8f0}
+.medical-sources p{max-width:850px;line-height:1.9;color:#516279}
+.medical-review-note .wrap{display:flex;flex-wrap:wrap;gap:12px 22px}
+.anatomy-image-link:focus-visible{outline:3px solid #b99564;outline-offset:4px}
+@media(max-width:760px){.medical-anatomy-grid{grid-template-columns:1fr}.medical-anatomy figure{padding:15px}.medical-anatomy img{height:340px}.anatomy-explanation h3{font-size:20px}.medical-cards p{font-size:16px}.medical-anatomy figcaption{font-size:14px}}
+@media print{.medical-anatomy-grid{grid-template-columns:1fr 1fr}.medical-anatomy figure{box-shadow:none}.medical-anatomy img{height:280px}.anatomy-image-link{break-inside:avoid}}
