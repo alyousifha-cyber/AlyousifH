@@ -481,3 +481,6 @@ section.hero{padding:0!important}
 .related-content .wrap{display:flex;align-items:center;justify-content:center;gap:10px 18px;flex-wrap:wrap;padding-top:20px;padding-bottom:20px}
 .related-content strong{color:var(--navy)}
 .related-content a{color:#0d6f78;font-weight:800;text-decoration:underline;text-underline-offset:4px}
+
+/* Keep longer medical-guide menus accessible on compact screens. */
+@media(max-width:860px){#navigation.open{max-height:calc(100vh - 110px);max-height:calc(100dvh - 110px);overflow-y:auto;overscroll-behavior:contain}#navigation .nav-home{font-weight:800;color:var(--navy,#0f2c59)}}
