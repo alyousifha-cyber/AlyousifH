@@ -9,3 +9,8 @@
 
 .library-group .science-grid-two{grid-template-columns:repeat(2,minmax(0,1fr))}.library-group .science-grid-two .science-card.science-text-card{grid-template-columns:minmax(0,1fr);direction:rtl}
 @media(max-width:620px){.library-group .science-grid-two{grid-template-columns:1fr}.library-group .science-grid-two .science-text-card{min-height:148px}}
+
+
+.replacement-chapter{margin-top:24px;border-top:5px solid #b99564}.replacement-chapter-heading{padding-top:42px;padding-bottom:12px}.replacement-chapter-heading h2{font-size:clamp(28px,3.5vw,42px);color:#0f2c59;line-height:1.45;margin:12px 0}.replacement-chapter-heading p{line-height:1.9;color:#52677b}.replacement-section{scroll-margin-top:110px}.replacement-jump{font-weight:800}.merged-faq .faq-layout{display:block}.faq-group-title{font-size:23px;color:#0f2c59;margin:30px 0 16px}.merged-faq .knee-faq{max-width:none}.guide-contents a:focus-visible{outline:3px solid #b99564;outline-offset:3px}
+
+@media(min-width:861px) and (max-width:1250px){.merged-joint-guide .nav{flex-wrap:wrap;padding-top:12px;padding-bottom:12px}.merged-joint-guide .nav nav{order:3;flex-basis:100%;justify-content:center;flex-wrap:wrap;gap:10px 18px}.merged-joint-guide .nav nav a{font-size:13px}}

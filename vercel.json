@@ -6,6 +6,16 @@
       "source": "/professional",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/knee-replacement",
+      "destination": "/knee-osteoarthritis#joint-replacement",
+      "permanent": true
+    },
+    {
+      "source": "/hip-replacement",
+      "destination": "/hip-osteoarthritis#joint-replacement",
+      "permanent": true
     }
   ],
   "headers": [
