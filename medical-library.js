@@ -12,7 +12,8 @@
     });
     buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.libraryFilter === key)));
     const chosen = buttons.find(button => button.dataset.libraryFilter === key);
-    status.textContent = `${chosen.textContent.trim()} — ${count} ${count === 1 ? 'دليل متاح' : 'أدلة متاحة'}.`;
+    const label = count === 1 ? 'دليل واحد' : count === 2 ? 'دليلان' : count <= 10 ? `${count} أدلة` : `${count} دليلًا`;
+    status.textContent = `${chosen.textContent.trim()} — ${label}.`;
   }
   buttons.forEach(button => button.addEventListener('click', () => select(button.dataset.libraryFilter)));
   function followHash() {
