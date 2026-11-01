@@ -1,6 +1,6 @@
 (async function () {
   const version = document.currentScript.dataset.version;
-  const response = await fetch('index.html', { cache: 'no-store' });
+  const response = await fetch('/', { cache: 'no-store' });
   let html = await response.text();
 
   if (version === 'h2') {
