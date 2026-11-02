@@ -1,23 +1,26 @@
 # Media source register
 
-This register documents the origin and release status of locally hosted third-party media.
-It is a release gate: assets marked `VERIFY` must not be promoted to production until the
-site owner confirms permission or they are replaced with owned/licensed alternatives.
+## Radiographs displayed in patient guides
 
-## Medical images with reusable licensing
+Each guide links to the original image and its licence next to the radiograph. Local versions use WebP encoding.
 
-| Local asset | Source | Status |
+| Local asset | Original and creator | Licence |
 | --- | --- | --- |
-| `public/medical/knee-normal.webp` | Wikimedia Commons: X-ray of a normal knee by anteroposterior projection | Reusable; retain source attribution |
-| `public/medical/knee-oa.webp` | Wikimedia Commons: Osteoarthritis on X-ray | Reusable; retain source attribution |
-| `public/medical/hip-oa.webp` | Wikimedia Commons: Severe Tönnis grade 3 osteoarthritis of the hip | CC0/public-domain dedication |
-| `public/medical/patellofemoral.webp` | Wikimedia Commons: Lateral patellofemoral angle | Reusable; retain source attribution |
+| `public/medical/knee-normal.webp` | [Normal knee, AP projection](https://commons.wikimedia.org/wiki/File:X-ray_of_a_normal_knee_by_anteroposterior_projection.jpg), Mikael Häggström | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| `public/medical/knee-oa.webp` | [Osteoarthritis on X-ray](https://commons.wikimedia.org/wiki/File:Osteoarthritis_on_X-ray.jpg), James Heilman | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| `public/medical/patellofemoral.webp` | [Lateral patellofemoral angle](https://commons.wikimedia.org/wiki/File:Lateral_patellofemoral_angle.jpg), Mikael Häggström. Normal patella with measurement lines. | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| `public/medical/acetabular-both-column.webp` | [Acet Both column 01](https://commons.wikimedia.org/wiki/File:Acet_Both_column_01.jpg), Dr. C. J. Thakkar | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+
+Anatomical illustrations are documented in [assets/anatomy/README.md](assets/anatomy/README.md).
+
+## Archived media excluded from deployment
+
+The following former homepage photos, local TV clips and their posters have been removed from patient pages and excluded in `.vercelignore`. Confirm redistribution permission before any future republication. The old pelvis AP and open-book ring radiographs are also excluded pending identification of their source and licence.
 
 ## Homepage editorial images
 
 The following files were cached from the URLs previously embedded in the site to remove
-runtime hotlink failures. Their publication permission still requires confirmation or
-replacement with owned/generated assets before production.
+runtime hotlink failures. They are retained only as repository archives.
 
 | Local asset | Original host | Release status |
 | --- | --- | --- |

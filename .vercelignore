@@ -8,3 +8,9 @@ vercel-redeploy-trigger.txt
 # Retired legacy page containing obsolete contact details
 د.حسين عبدالله اليوسف
 
+# Archived assets without confirmed redistribution permission or an authenticated source
+public/images/content/
+public/media/
+public/medical/pelvis-normal-ap.webp
+public/medical/pelvic-ring-open-book.webp
+assets/knee-surgery-background.jpg
