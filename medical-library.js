@@ -19,7 +19,8 @@
   function followHash() {
     const group = groups.find(g => `#${g.id}` === location.hash);
     if (group) select(group.dataset.libraryGroup);
-    else if (location.hash === '#science') select('all');
+    else if (location.hash === '#science') select(window.matchMedia('(max-width: 620px)').matches ? 'knee' : 'all');
+    else if (!location.hash && window.matchMedia('(max-width: 620px)').matches) select('knee');
   }
   window.addEventListener('hashchange', followHash);
   followHash();
